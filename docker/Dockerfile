@@ -19,7 +19,8 @@ COPY . .
 RUN npm install -g "turbo@^1.9.3"
 
 # Include both remix (web) and worker packages
-RUN turbo prune --scope=@documenso/remix --scope=@documenso/worker --docker
+RUN turbo prune --scope=@documenso/remix --docker
+
 
 
 ###########################
