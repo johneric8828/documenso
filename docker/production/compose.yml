@@ -42,7 +42,7 @@ services:
       dockerfile: docker/Dockerfile
     container_name: documenso-worker
     restart: unless-stopped
-    command: pnpm turbo run worker --filter=worker
+    command: pnpm --filter=@documenso/worker start
     networks:
       - work-net
     environment:
