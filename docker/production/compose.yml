@@ -9,7 +9,7 @@ services:
     restart: unless-stopped
     command: pnpm turbo run start --filter=web
     networks:
-      - work-ai-starter-kit
+      - work-net
     environment:
       - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
       - NEXTAUTH_URL=${NEXT_PUBLIC_WEBAPP_URL}
@@ -44,7 +44,7 @@ services:
     restart: unless-stopped
     command: pnpm turbo run worker --filter=worker
     networks:
-      - work-ai-starter-kit
+      - work-net
     environment:
       - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
       - NEXTAUTH_URL=${NEXT_PUBLIC_WEBAPP_URL}
@@ -73,5 +73,5 @@ volumes:
   documenso_storage:
 
 networks:
-  work-ai-starter-kit:
+  work-net:
     external: true
